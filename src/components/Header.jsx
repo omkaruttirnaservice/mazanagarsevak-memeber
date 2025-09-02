@@ -167,7 +167,7 @@
 // export default Header;
 
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useSelector } from "react-redux";
