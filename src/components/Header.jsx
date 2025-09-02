@@ -180,9 +180,16 @@ const Header = () => {
   const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   // ✅ If representative has photo use that, otherwise fallback logo
-  const imageSrc = representative?.representativephoto
-    ? `${BASE_URL}/uploads/representative/${representative.representativephoto}`
-    : "/logo.jpg";
+  const [imageSrc, setImgSrc] = useState("/logo.jpg");
+
+  useEffect(() => {
+    setImgSrc(
+      representative?.representativephoto
+        ? `${BASE_URL}/uploads/representative/${representative.representativephoto}`
+        : "/logo.jpg"
+    );
+  }, [representative?.representativephoto]);
+
 
   const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
 
