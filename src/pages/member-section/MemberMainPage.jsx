@@ -44,6 +44,7 @@ const MemberMainPage = () => {
                 console.log('Rep Data (Direct API):', res.data);
 
                 const repData = res.data?.data;
+
                 if (repData) {
                     setCityData(repData);
 
