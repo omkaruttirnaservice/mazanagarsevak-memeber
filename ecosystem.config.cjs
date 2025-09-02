@@ -1,7 +1,7 @@
 module.exports = {
         apps: [
                 {
-                        name: "uat.mazanagarsevak.com",
+                        name: "vaibhav-thakre.mns.com",
                         script: "server.js",
                         instances: 1,
                         autorestart: true,
