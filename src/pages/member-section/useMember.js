@@ -7,12 +7,12 @@ import { toast } from 'react-toastify';
 
 const useMember = () => {
     const memberData = useSelector((state) => state.representative.data);
+    console.log('memberData=', memberData);
     const dispatch = useDispatch();
+    const representativeId = memberData?._id || getCookie('representativeId');
+    const domain = memberData?.domain || getCookie('domain');
 
     const load = async () => {
-        const representativeId = memberData?._id || getCookie('representativeId');
-        const domain = memberData?.domain || getCookie('domain');
-
         if (!domain) {
             console.warn('❌ No domain found, skipping fetch');
             return;
@@ -45,7 +45,7 @@ const useMember = () => {
         if (!memberData?._id) {
             load();
         }
-    }, [memberData._id]);
+    }, [memberData._id, domain]);
 
     return { memberData };
 };
