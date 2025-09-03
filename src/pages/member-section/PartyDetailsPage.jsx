@@ -11,11 +11,11 @@ const PoliticalPartyPage = () => {
 
   const representativeId = getCookie("representativeId");
 
-  useEffect(() => {
-    if (representativeId) {
-      dispatch(fetchRepresentativeDetailsById(representativeId));
-    }
-  }, [dispatch, representativeId]);
+  // useEffect(() => {
+  //   if (representativeId) {
+  //     dispatch(fetchRepresentativeDetailsById(representativeId));
+  //   }
+  // }, [dispatch, representativeId]);
 
   return (
     <>

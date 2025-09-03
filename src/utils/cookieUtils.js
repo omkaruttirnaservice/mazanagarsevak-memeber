@@ -1,18 +1,18 @@
-import Cookies from "universal-cookie";
-
-const cookies = new Cookies();
+import Cookies from 'js-cookie';
 
 export const setCookie = (key, value, options = {}) => {
-  cookies.set(key, value, {
-    path: "/",
-    ...options,
-  });
+    Cookies.set(key, value, {
+        path: '/',
+        sameSite: 'Lax',
+        secure: false,
+        ...options,
+    });
 };
 
 export const getCookie = (key) => {
-  return cookies.get(key);
+    return Cookies.get(key);
 };
 
 export const removeCookie = (key) => {
-  cookies.remove(key, { path: "/" });
+    Cookies.remove(key, { path: '/' });
 };

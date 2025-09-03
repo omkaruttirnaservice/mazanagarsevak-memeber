@@ -24,10 +24,10 @@ const AboutMemberPage = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    if (representativeId)
-      dispatch(fetchRepresentativeDetailsById(representativeId));
-  }, [representativeId, dispatch]);
+  // useEffect(() => {
+  //   if (representativeId)
+  //     dispatch(fetchRepresentativeDetailsById(representativeId));
+  // }, [representativeId, dispatch]);
 
   return (
     <>

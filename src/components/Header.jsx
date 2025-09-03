@@ -1,19 +1,25 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
+import useMember from '../pages/member-section/useMember';
 
 const Header = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const representative = useSelector((state) => state.representative.data);
+
+    const { memberData: representative } = useMember();
+
+    console.log(representative, '=representative');
     const location = useLocation();
 
     const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
     // ✅ If representative has photo use that, otherwise fallback logo
-    const imageSrc = representative?.representativephoto
-        ? `${BASE_URL}/uploads/representative/${representative.representativephoto}`
-        : '/logo.jpg';
+
+    const imageSrc = useMemo(() => {
+        return representative?.representativephoto
+            ? `${BASE_URL}/uploads/representative/${representative.representativephoto}`
+            : '/logo.jpg';
+    }, [representative]);
 
     const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
 
