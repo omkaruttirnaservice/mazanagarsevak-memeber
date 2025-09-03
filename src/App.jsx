@@ -10,6 +10,8 @@ import MemberVideoPage from './pages/member-section/MemberVideoPage';
 import NagrikSuvidhaPage from './pages/member-section/NagrikSuvidhaPage';
 import PoliticalPartyPage from './pages/member-section/PartyDetailsPage';
 import SocialWorkPage from './pages/member-section/SocialWorkPage';
+import { setCookie } from './utils/cookieUtils';
+import useMember from './pages/member-section/useMember';
 
 function App() {
     const [domain, setDomain] = useState('');
@@ -29,7 +31,7 @@ function App() {
             }
 
             setDomain(current);
-            localStorage.setItem('domain', current);
+            setCookie('domain', current);
         } else {
             setDomainNotFound(true);
         }

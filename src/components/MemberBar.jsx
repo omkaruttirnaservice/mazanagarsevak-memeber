@@ -10,12 +10,12 @@ const MemberBar = () => {
     (state) => state.representative
   );
 
-  useEffect(() => {
-    const representativeId = getCookie("representativeId");
-    if (representativeId) {
-      dispatch(fetchRepresentativeDetailsById(representativeId));
-    }
-  }, [dispatch]);
+  // useEffect(() => {
+  //   const representativeId = getCookie("representativeId");
+  //   if (representativeId) {
+  //     dispatch(fetchRepresentativeDetailsById(representativeId));
+  //   }
+  // }, [dispatch]);
 
   if (loading || !selectedMember) return null;
 

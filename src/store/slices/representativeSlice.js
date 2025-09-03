@@ -13,7 +13,38 @@ export const fetchRepresentativeDetailsById = createAsyncThunk(
 const representativeSlice = createSlice({
     name: 'representative',
     initialState: {
-        data: null,
+        data: {
+            _id: null,
+            name: '',
+            representativephoto: '',
+            gender: '',
+            age: null,
+            dob: '',
+            position: '',
+            city: '',
+            wardNo: '',
+            contactNo: '',
+            email: '',
+            address: [],
+            education: '',
+            experience: '',
+            history: '',
+            isActive: false,
+            careerHistory: [],
+            facebook: '',
+            instagram: '',
+            twitter: '',
+            linkedin: '',
+            youtube: '',
+            biography: '',
+            createdAt: '',
+            updatedAt: '',
+            __v: null,
+            domain: '',
+            photos: [],
+            videos: [],
+            works: [],
+        },
         loading: false,
         error: null,
     },
@@ -22,6 +53,10 @@ const representativeSlice = createSlice({
             state.data = null;
             state.error = null;
             state.loading = false;
+        },
+
+        setMemberData: (state, action) => {
+            state.data = action.payload;
         },
     },
     extraReducers: (builder) => {
@@ -41,5 +76,5 @@ const representativeSlice = createSlice({
     },
 });
 
-export const { clearRepresentative } = representativeSlice.actions;
+export const { clearRepresentative, setMemberData } = representativeSlice.actions;
 export default representativeSlice.reducer;
