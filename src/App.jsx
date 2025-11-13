@@ -12,6 +12,7 @@ import PoliticalPartyPage from './pages/member-section/PartyDetailsPage';
 import SocialWorkPage from './pages/member-section/SocialWorkPage';
 import { setCookie } from './utils/cookieUtils';
 import useMember from './pages/member-section/useMember';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
     const [domain, setDomain] = useState('');
@@ -75,6 +76,7 @@ function App() {
                     <Route path="about-party" element={<PoliticalPartyPage />} />
                     <Route path="contact-member" element={<MemberContactPage />} />
                     <Route path="nagrik-suvidha" element={<NagrikSuvidhaPage />} />
+                    <Route path="privacy-policy" element={<PrivacyPolicy />} />
                     <Route path="*" element={<MemberMainPage />} />
                 </Route>
             </Routes>
