@@ -1,74 +1,78 @@
-import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <section className="py-30 bg-gradient-to-b from-orange-200 via-white to-green-200 min-h-screen overflow-y-auto">
+    <section className="py-20 bg-gradient-to-b from-orange-200 via-white to-green-200 min-h-screen overflow-y-auto">
       <div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         style={{ fontFamily: '"Noto Sans Devanagari", sans-serif' }}
       >
-       
+        <div className="bg-white shadow-2xl rounded-2xl p-10 md:p-14 space-y-8">
+          {/* Title */}
+          <h1 className="text-4xl font-bold text-center text-orange-700 mb-8 drop-shadow-sm">
+            Privacy Policy
+          </h1>
 
-        <div className="bg-white shadow-2xl rounded-2xl p-10 md:p-14 space-y-6">
-             <h1 className="text-4xl font-bold text-center text-orange-700 mb-12 drop-shadow-sm">
-          Privacy Policy
-        </h1>
-          <p className="text-gray-700 leading-relaxed">
-            Welcome to the Privacy Policy of your Mazha Nagar Sevak project. We value your privacy and are committed to protecting your personal information. This policy explains how we collect, use, and safeguard your data.
+          {/* Last Updated */}
+          <p className="text-gray-500 text-center mb-6">
+            <strong>Last Updated: 13 Nov,2025</strong>
           </p>
 
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-              1. Information We Collect
-            </h2>
-            <p className="text-gray-700 leading-relaxed">
-              We may collect personal information such as your name, mobile number, email address, and any other data you provide while using our services. We also collect non-personal information for improving our platform.
-            </p>
+          {/* Sections */}
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+                1. Collecting and Using Your Personal Data
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                <strong>
+                  {" "}
+                  We do not collect, store, or share any of your personal data
+                  with third parties.
+                </strong>{" "}
+                The application works entirely safely and only provides publicly
+                available information about representatives.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+                2. App Features
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                This app provides detailed information about representatives,
+                including their work, history, biography, videos, images, and
+                social media profiles. All the information is publicly
+                available, and we do not share any personal data with
+                third-party applications.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+                3. Children's Privacy
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                Our application is not intended for children under the age of
+                13. We do not knowingly collect any personal information from
+                children.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+                4. Updates to This Privacy Policy
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                We may update our Privacy Policy from time to time. Any changes
+                will be posted on this page, and the{" "}
+                <strong>Last Updated</strong> date will be revised accordingly.
+              </p>
+            </div>
           </div>
 
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-              2. How We Use Your Information
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-2">
-              The information we collect is used to:
-            </p>
-            <ul className="list-disc list-inside text-gray-700 space-y-1">
-              <li>Provide and maintain our services</li>
-              <li>Communicate important updates and notifications</li>
-              <li>Analyze and improve user experience</li>
-              <li>Ensure security and prevent fraudulent activities</li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-              3. Sharing Your Information
-            </h2>
-            <p className="text-gray-700 leading-relaxed">
-              We respect your privacy and do not sell your personal information. Data may be shared with trusted third parties only to provide services or comply with legal obligations.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-              4. Cookies and Tracking
-            </h2>
-            <p className="text-gray-700 leading-relaxed">
-              We use cookies and similar technologies to enhance your experience, analyze traffic, and provide personalized content. You can manage your cookie preferences in your browser settings.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-              5. Security
-            </h2>
-            <p className="text-gray-700 leading-relaxed">
-              We implement appropriate security measures to protect your personal information. However, no method of transmission over the internet is completely secure.
-            </p>
-          </div>
+          {/* Footer */}
           <p className="text-gray-500 text-sm mt-6 text-center">
-            © {new Date().getFullYear()} Mazha Nagar Sevak. All rights reserved.
+            © {new Date().getFullYear()} Nagrik Suvicha. All rights reserved.
           </p>
         </div>
       </div>
