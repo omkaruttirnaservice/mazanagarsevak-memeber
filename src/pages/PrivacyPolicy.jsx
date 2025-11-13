@@ -3,7 +3,7 @@ const PrivacyPolicy = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-orange-200 via-white to-green-200 min-h-screen overflow-y-auto">
       <div
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20"
         style={{ fontFamily: '"Noto Sans Devanagari", sans-serif' }}
       >
         <div className="bg-white shadow-2xl rounded-2xl p-10 md:p-14 space-y-8">
