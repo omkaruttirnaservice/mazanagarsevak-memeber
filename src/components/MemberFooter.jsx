@@ -76,6 +76,19 @@ const MemberFooter = () => {
               </div>
             </div>
           </Link>
+
+           <Link to="/privacy-policy" className="block h-full">
+            <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition text-center flex items-center justify-center h-full">
+              <div className="flex flex-col items-center justify-center h-full w-full">
+                <div className="text-blue-600 text-2xl sm:text-3xl mb-2">
+                  <FiMessageSquare />
+                </div>
+                <h3 className="text-sm sm:text-base font-semibold text-blue-800">
+                  Privacy Policy
+                </h3>
+              </div>
+            </div>
+          </Link>
         </div>
 
         {/* Form */}
