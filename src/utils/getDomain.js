@@ -43,7 +43,10 @@ export const getDomain = (paramDomain) => {
   const host = window.location.hostname; // e.g. abc.mazanagarsevak.com
 
   // Skip if localhost
-  if (host.includes("localhost")) return null;
+  if (host.includes("localhost")) 
+    // console.warn("⚠️ Localhost detected, using test domain");
+    // return "shailesh-dhage.mazanagarsevak.com";
+    return null;
 
   // Check if it's a valid subdomain (like abc.mazanagarsevak.com)
   const parts = host.split(".");

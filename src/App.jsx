@@ -13,6 +13,7 @@ import SocialWorkPage from './pages/member-section/SocialWorkPage';
 import { setCookie } from './utils/cookieUtils';
 import useMember from './pages/member-section/useMember';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import AppRedirect from './pages/AppRedirect';
 
 function App() {
     const [domain, setDomain] = useState('');
@@ -28,7 +29,7 @@ function App() {
             }
 
             if (current.startsWith('localhost')) {
-                current = 'localhost:5174';
+                current = 'shailesh-dhage.mazanagarsevak.com';
             }
 
             setDomain(current);
@@ -67,6 +68,8 @@ function App() {
     return (
         <>
             <Routes>
+                 {/* <Route path="/app-test" element={<AppRedirect />} />  */}
+                <Route path="/app.apk" element={<AppRedirect />} /> 
                 <Route path="/" element={<MemberLayout />}>
                     <Route index element={<MemberMainPage />} />
                     <Route path="about-member" element={<AboutMemberPage />} />
