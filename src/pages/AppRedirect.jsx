@@ -17,8 +17,15 @@ const AppRedirect = () => {
     }
 
     // Extract only domain name
-    const domain = fullDomainUrl.replace(/^https?:\/\//, "");
+    // const domain = fullDomainUrl.replace(/^https?:\/\//, "");
+    // console.log("Extracted domain:", domain);
+
+     const domain = fullDomainUrl
+      .replace(/^https?:\/\//, "") // remove http/https
+      .split(".")[0]; // take first subdomain
+
     console.log("Extracted domain:", domain);
+
 
     const redirectUrl = `${baseUrl}/uploads/app/${domain}.apk`;
 
